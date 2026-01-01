@@ -7,19 +7,16 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('venues', function($table)
+        Schema::create('projects', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
-            $table->string('venue', 255);
+            $table->string('project', 199);
             $table->string('slug', 199);
             $table->text('description');
-            $table->decimal('width',4,2);
-            $table->decimal('length',4,2);
-            $table->string('image', 199)->nullable();
-            $table->tinyinteger('publish');
-            $table->integer('resource');
-            $table->string('colour', 10)->nullable();
+            $table->string('image')->nullable();
+            $table->integer('active')->nullable();
+            $table->integer('publish')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
@@ -27,6 +24,6 @@ return new class extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('venues');
+        Schema::dropIfExists('projects');
     }
 };

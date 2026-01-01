@@ -8,5 +8,5 @@ use Filament\Support\Icons\Heroicon;
 
 class WebsiteCluster extends Cluster
 {
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingOffice2;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedGlobeAlt;
 }
