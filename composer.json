@@ -1,0 +1,30 @@
+{
+    "name": "light-worx/connexion-website",
+    "description": "Website module for Connexion church management software",
+    "authors": [
+        {
+            "name": "Michael Bishop",
+            "email": "admin@light-worx.co.za"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Website\\": "app/",
+            "Modules\\Website\\Database\\Factories\\": "database/factories/",
+            "Modules\\Website\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Website\\Tests\\": "tests/"
+        }
+    }
+}

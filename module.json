@@ -1,0 +1,11 @@
+{
+    "name": "Website",
+    "alias": "connexion-website",
+    "description": "Website module",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Website\\Providers\\WebsiteServiceProvider"
+    ],
+    "files": []
+}
