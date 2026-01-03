@@ -2,6 +2,7 @@
 
 namespace Modules\Website\Providers;
 
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Nwidart\Modules\Traits\PathNamespace;
@@ -27,6 +28,11 @@ class WebsiteServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->name, 'database/migrations'));
+        Relation::morphMap([
+            'event' => 'Modules\Website\Models\Event',
+            'post' => 'Modules\Website\Models\Post',
+            'project' => 'Modules\Website\Models\Project'
+        ]);
     }
 
     /**
